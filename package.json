@@ -1,0 +1,63 @@
+{
+  "name": "js-dev-env",
+  "version": "1.0.0",
+  "description": "JavaScript Development Environment",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 4200",
+    "share": "npm-run-all --parallel open:src localtunnel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sksundram/js-dev-env.git"
+  },
+  "keywords": [],
+  "author": "Shailesh Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sksundram/js-dev-env/issues"
+  },
+  "homepage": "https://github.com/sksundram/js-dev-env#readme",
+  "dependencies": {
+    "whatwg-fetch": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "*",
+    "chai": "*",
+    "chalk": "*",
+    "cheerio": "*",
+    "compression": "*",
+    "cross-env": "*",
+    "css-loader": "*",
+    "eslint": "*",
+    "eslint-plugin-import": "*",
+    "eslint-watch": "*",
+    "express": "*",
+    "extract-text-webpack-plugin": "*",
+    "html-webpack-plugin": "*",
+    "jsdom": "*",
+    "json-schema-faker": "*",
+    "json-server": "*",
+    "localtunnel": "*",
+    "mocha": "*",
+    "nock": "*",
+    "npm-run-all": "*",
+    "nsp": "*",
+    "numeral": "*",
+    "open": "*",
+    "rimraf": "*",
+    "style-loader": "*",
+    "webpack": "*",
+    "webpack-dev-middleware": "*",
+    "webpack-hot-middleware": "*",
+    "webpack-md5-hash": "*"
+  }
+}
